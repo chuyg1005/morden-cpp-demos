@@ -204,23 +204,21 @@ make
 
 ## 自动化通知
 
-本项目包含GitHub Actions工作流，可以在推送到main分支时发送通知。
+本项目包含GitHub Actions工作流，可以在推送到main分支时发送邮件通知。
 
-### QQ群通知选项
+### 邮件通知
 
-由于GitHub Actions没有直接发送QQ消息的内置功能，提供了以下几种方案：
+当有新的推送到达main分支时，系统会自动发送邮件通知。
 
-1. **使用第三方通知服务** (如Server酱) - 需要配置相应的webhook URL
-2. **自定义服务** - 需要自己搭建接收通知并转发到QQ的服务
-3. **使用Discord作为中介** - 通过Discord机器人转发到QQ
+要启用邮件通知功能，需要在GitHub仓库的Secrets中添加以下配置：
+- `EMAIL_USERNAME` - 发送邮件的邮箱账号
+- `EMAIL_PASSWORD` - 发送邮件的邮箱密码或应用专用密码
+- `EMAIL_RECIPIENT` - 接收通知的邮箱地址
 
-要启用通知功能，需要在GitHub仓库的Secrets中添加相应的配置：
-- `QQ_WEBHOOK_URL` - 自定义QQ通知服务的URL
-- `SERVERCHAN_KEY` - Server酱的API密钥
-- `CUSTOM_SERVICE_TOKEN` - 自定义服务的认证令牌
-- `DISCORD_WEBHOOK_URL` - Discord webhook URL
+工作流使用了 `dawidd6/action-send-mail@v3` 动作，支持大多数SMTP邮件服务。
+默认配置使用Gmail SMTP，如需使用其他邮件服务，请相应修改 `server_address` 和 `server_port`。
 
-工作流文件位于 `.github/workflows/` 目录下。
+工作流文件位于 `.github/workflows/email-notification.yml`。
 
 ## 项目改进
 
