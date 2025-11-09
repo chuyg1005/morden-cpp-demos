@@ -1015,6 +1015,7 @@ CMakeFiles/cpp_learning_demo.dir/main.cpp.o: main.cpp \
   modern-cpp-features/modern_cpp_features_demo.h \
   move-semantics/move_semantics_demo.h \
   multithreading/multithreading_demo.h \
+  multithreading/thread_safe_queue.h \
   smart-pointers/smart_pointers_base.h \
   smart-pointers/circular_reference/circular_reference_demo.h \
   smart-pointers/smart_pointers_base.h \
@@ -2702,6 +2703,8 @@ meta-programming/type_traits/type_traits_demo.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/ranges_remove_copy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__type_traits/make_signed.h:
+
+multithreading/thread_safe_queue.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/ranges_count_if.h:
 

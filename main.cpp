@@ -18,13 +18,19 @@
 #include "smart-pointers/weak_ptr/weak_ptr_demo.h"
 #include "smart-pointers/circular_reference/circular_reference_demo.h"
 
+// Design patterns headers
+#include "design-patterns/singleton/singleton_pattern.h"
+#include "design-patterns/observer/observer_pattern.h"
+#include "design-patterns/strategy/strategy_pattern.h"
+#include "design-patterns/decorator/decorator_pattern.h"
+#include "design-patterns/factory/factory_pattern.h"
+
 // Other C++ topics headers
 #include "stl-containers/stl_containers_demo.h"
 #include "stl-algorithms/stl_algorithms_demo.h"
 #include "move-semantics/move_semantics_demo.h"
 #include "exception-handling/exception_handling_demo.h"
 #include "multithreading/multithreading_demo.h"
-#include "design-patterns/design_patterns_demo.h"
 #include "modern-cpp-features/modern_cpp_features_demo.h"
 
 int main() {

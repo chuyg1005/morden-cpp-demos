@@ -1016,6 +1016,7 @@ CMakeFiles/cpp_learning_demo.dir/main.cpp.o
  /Users/yukang/projects/meta-programming-demo/modern-cpp-features/modern_cpp_features_demo.h
  /Users/yukang/projects/meta-programming-demo/move-semantics/move_semantics_demo.h
  /Users/yukang/projects/meta-programming-demo/multithreading/multithreading_demo.h
+ /Users/yukang/projects/meta-programming-demo/multithreading/thread_safe_queue.h
  /Users/yukang/projects/meta-programming-demo/smart-pointers/smart_pointers_base.h
  /Users/yukang/projects/meta-programming-demo/smart-pointers/circular_reference/circular_reference_demo.h
  /Users/yukang/projects/meta-programming-demo/smart-pointers/smart_pointers_base.h
