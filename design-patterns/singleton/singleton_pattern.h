@@ -35,7 +35,7 @@ namespace design_patterns_demo {
         }
     };
 
-    // 静态成员定义
+    // 静态成员初始化
     std::unique_ptr<Singleton> Singleton::instance_ = nullptr;
     std::mutex Singleton::mutex_;
 
