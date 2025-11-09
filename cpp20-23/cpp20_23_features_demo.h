@@ -122,10 +122,24 @@ namespace cpp20_23_features_demo {
         uint8_t value = 0b10101010;
         
         std::cout << "原始值: " << std::bitset<8>(value) << std::endl;
-        std::cout << "字节序是否为小端: " << std::endian::native << std::endl;
+        // 检查字节序
+        if constexpr (std::endian::native == std::endian::little) {
+            std::cout << "字节序: 小端" << std::endl;
+        } else if constexpr (std::endian::native == std::endian::big) {
+            std::cout << "字节序: 大端" << std::endl;
+        } else {
+            std::cout << "字节序: 混合" << std::endl;
+        }
         
-        // 位反转
-        uint8_t reversed = std::byteswap(value);
+        // 位反转（手动实现）
+        uint8_t reversed = ((value & 0x01) << 7) | 
+                          ((value & 0x02) << 5) | 
+                          ((value & 0x04) << 3) | 
+                          ((value & 0x08) << 1) | 
+                          ((value & 0x10) >> 1) | 
+                          ((value & 0x20) >> 3) | 
+                          ((value & 0x40) >> 5) | 
+                          ((value & 0x80) >> 7);
         std::cout << "位反转后: " << std::bitset<8>(reversed) << std::endl;
     }
     

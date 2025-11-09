@@ -46,7 +46,12 @@ namespace filesystem_demo {
             auto file_size = fs::file_size(file_path);
             auto last_write_time = fs::last_write_time(file_path);
             std::cout << "文件大小: " << file_size << " 字节" << std::endl;
-            std::cout << "最后修改时间: " << decltype(last_write_time)::clock::to_time_t(last_write_time) << std::endl;
+            // 转换文件时间到系统时间
+            auto time = std::chrono::time_point_cast<std::chrono::system_clock::duration>(
+                last_write_time - fs::file_time_type::clock::now() + std::chrono::system_clock::now()
+            );
+            std::time_t tt = std::chrono::system_clock::to_time_t(time);
+            std::cout << "最后修改时间: " << std::ctime(&tt);
         }
     }
 

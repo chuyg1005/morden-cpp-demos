@@ -113,7 +113,7 @@ namespace performance_benchmarking_demo {
         std::cout << "\n自定义基准测试:" << std::endl;
         const int iterations = 100000;
         auto lambda_test = []() {
-            volatile int x = 0;
+            int x = 0;
             for (int i = 0; i < 100; ++i) {
                 x += i;
             }

@@ -45,8 +45,8 @@ namespace advanced_concurrency_demo {
         }
 
         template<class F, class... Args>
-        auto enqueue(F&& f, Args&&... args) -> std::future<typename std::result_of<F(Args...)>::type> {
-            using return_type = typename std::result_of<F(Args...)>::type;
+        auto enqueue(F&& f, Args&&... args) -> std::future<std::invoke_result_t<F, Args...>> {
+            using return_type = std::invoke_result_t<F, Args...>;
 
             auto task = std::make_shared<std::packaged_task<return_type()>>(
                 std::bind(std::forward<F>(f), std::forward<Args>(args)...)
@@ -109,8 +109,10 @@ namespace advanced_concurrency_demo {
     public:
         void push(T const& data) {
             Node* const new_node = new Node(data);
-            new_node->next = head.load();
-            while(!head.compare_exchange_weak(new_node->next, new_node));
+            Node* current_head = head.load();
+            do {
+                new_node->next = current_head;
+            } while (!head.compare_exchange_weak(current_head, new_node));
         }
         
         std::shared_ptr<T> pop() {
