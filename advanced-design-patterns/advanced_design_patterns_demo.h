@@ -233,8 +233,9 @@ namespace advanced_design_patterns_demo {
         std::unique_ptr<State> state;
 
     public:
-        void set_state(std::unique_ptr<State> new_state) {
-            state = std::move(new_state);
+        template<typename T>
+        void set_state(std::unique_ptr<T> new_state) {
+            state = std::unique_ptr<State>(std::move(new_state));
         }
 
         void request() {
