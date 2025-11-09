@@ -20,6 +20,7 @@ namespace advanced_concurrency_demo {
     class ThreadPool {
     private:
         std::vector<std::thread> workers;
+        // 任务数组，每个任务是一个std::function对象
         std::queue<std::function<void()>> tasks;
         std::mutex queue_mutex;
         std::condition_variable condition;
@@ -33,11 +34,15 @@ namespace advanced_concurrency_demo {
                         std::function<void()> task;
                         {
                             std::unique_lock<std::mutex> lock(this->queue_mutex);
+                            // 条件变量，没有任务以及没有退出信号会阻塞住
                             this->condition.wait(lock, [this]{ return this->stop || !this->tasks.empty(); });
+                            // 如果是退出信号
                             if(this->stop && this->tasks.empty()) return;
+                            // 获取一个任务
                             task = std::move(this->tasks.front());
                             this->tasks.pop();
                         }
+                        // 无锁环境下执行任务
                         task();
                     }
                 });
@@ -46,28 +51,36 @@ namespace advanced_concurrency_demo {
 
         template<class F, class... Args>
         auto enqueue(F&& f, Args&&... args) -> std::future<std::invoke_result_t<F, Args...>> {
+            // 这个类型萃取，获取返回值类型
             using return_type = std::invoke_result_t<F, Args...>;
 
+            // 定义一个封装任务，使用了完美转发
             auto task = std::make_shared<std::packaged_task<return_type()>>(
                 std::bind(std::forward<F>(f), std::forward<Args>(args)...)
             );
 
+            // 获取任务的future对象
             std::future<return_type> res = task->get_future();
+            // 任务入队
             {
                 std::unique_lock<std::mutex> lock(queue_mutex);
                 if(stop) throw std::runtime_error("enqueue on stopped ThreadPool");
                 tasks.emplace([task](){ (*task)(); });
             }
+            // 唤醒一个等待的线程执行
             condition.notify_one();
+            // 返回future对象
             return res;
         }
 
         ~ThreadPool() {
             {
                 std::unique_lock<std::mutex> lock(queue_mutex);
+                // 设置为退出信号
                 stop = true;
             }
             condition.notify_all();
+            // 等待所有workers退出
             for(std::thread &worker: workers) worker.join();
         }
     };

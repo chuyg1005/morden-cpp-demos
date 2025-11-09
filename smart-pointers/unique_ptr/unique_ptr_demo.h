@@ -5,7 +5,21 @@
 
 // 演示unique_ptr的使用
 namespace smart_pointers_demo {
+    struct Data {};
+    using DataUPtr = std::unique_ptr<Data>;
+    class MyClass {
+    private:
+        DataUPtr data;
+    public:
+        MyClass(DataUPtr data_)
+            : data(std::move(data_)) {}
+    };
     void unique_ptr_demo() {
+
+        MyClass my_class(std::make_unique<Data>());
+        std::unique_ptr<Data> data = std::make_unique<Data>();
+        MyClass my_class2((std::move(data)));
+
         std::cout << "\n=== unique_ptr 演示 ===" << std::endl;
         
         // 创建unique_ptr
