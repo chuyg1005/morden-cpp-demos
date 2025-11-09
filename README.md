@@ -6,32 +6,69 @@
 
 ```
 cpp-learning-demo/
-├── main.cpp                           # 主程序，演示所有C++技术
-├── CMakeLists.txt                     # 构建配置文件
-├── meta-programming/                  # 元编程技术
-│   ├── type_traits_demo.h             # 类型特征示例
-│   ├── template_specialization_demo.h # 模板特化示例
-│   ├── sfinae_demo.h                  # SFINAE示例
-│   ├── constexpr_demo.h               # constexpr和编译时计算示例
-│   ├── variadic_templates_demo.h      # 可变参数模板示例
-│   ├── type_introspection_demo.h      # 类型 introspection 示例
-│   └── crtp_demo.h                    # CRTP示例
-├── smart-pointers/                    # 智能指针
-│   └── smart_pointers_demo.h          # 智能指针使用示例
-├── stl-containers/                    # STL容器
-│   └── stl_containers_demo.h          # STL容器使用示例
-├── stl-algorithms/                    # STL算法
-│   └── stl_algorithms_demo.h          # STL算法使用示例
-├── move-semantics/                    # 移动语义
-│   └── move_semantics_demo.h          # 移动语义示例
-├── exception-handling/                # 异常处理
-│   └── exception_handling_demo.h      # 异常处理示例
-├── multithreading/                    # 多线程编程
-│   └── multithreading_demo.h          # 多线程编程示例
-├── design-patterns/                   # 设计模式
-│   └── design_patterns_demo.h         # 设计模式示例
-└── modern-cpp-features/               # 现代C++特性
-    └── modern_cpp_features_demo.h     # 现代C++特性示例
+├── main.cpp                                    # 主程序，演示所有C++技术
+├── CMakeLists.txt                              # 构建配置文件
+├── meta-programming/                           # 元编程技术
+│   ├── type_traits/                            # 类型特征示例
+│   │   ├── type_traits_base.h                  # 类型特征基础实现
+│   │   └── type_traits_demo.h                  # 类型特征演示
+│   ├── template_specialization/                # 模板特化示例
+│   │   ├── template_specialization_base.h      # 模板特化基础实现
+│   │   └── template_specialization_demo.h      # 模板特化演示
+│   ├── sfinae/                                 # SFINAE示例
+│   │   ├── sfinae_base.h                       # SFINAE基础实现
+│   │   └── sfinae_demo.h                       # SFINAE演示
+│   ├── constexpr/                              # constexpr示例
+│   │   ├── constexpr_base.h                    # constexpr基础实现
+│   │   └── constexpr_demo.h                    # constexpr演示
+│   ├── variadic_templates/                     # 可变参数模板示例
+│   │   ├── variadic_templates_base.h           # 可变参数模板基础实现
+│   │   └── variadic_templates_demo.h           # 可变参数模板演示
+│   ├── type_introspection/                     # 类型 introspection 示例
+│   │   ├── type_introspection_base.h           # 类型 introspection 基础实现
+│   │   └── type_introspection_demo.h           # 类型 introspection 演示
+│   └── crtp/                                   # CRTP示例
+│       ├── crtp_base.h                         # CRTP基础实现
+│       └── crtp_demo.h                         # CRTP演示
+├── smart-pointers/                             # 智能指针
+│   ├── unique_ptr/                             # unique_ptr示例
+│   │   └── unique_ptr_demo.h                   # unique_ptr演示
+│   ├── shared_ptr/                             # shared_ptr示例
+│   │   └── shared_ptr_demo.h                   # shared_ptr演示
+│   ├── weak_ptr/                               # weak_ptr示例
+│   │   └── weak_ptr_demo.h                     # weak_ptr演示
+│   ├── circular_reference/                     # 循环引用示例
+│   │   └── circular_reference_demo.h           # 循环引用演示
+│   └── smart_pointers_base.h                   # 智能指针基础实现
+├── stl-containers/                             # STL容器
+│   └── stl_containers_demo.h                   # STL容器使用示例
+├── stl-algorithms/                             # STL算法
+│   └── stl_algorithms_demo.h                   # STL算法使用示例
+├── move-semantics/                             # 移动语义
+│   └── move_semantics_demo.h                   # 移动语义示例
+├── exception-handling/                         # 异常处理
+│   └── exception_handling_demo.h               # 异常处理示例
+├── multithreading/                             # 多线程编程
+│   ├── thread_safe_queue.h                     # 线程安全队列实现
+│   └── multithreading_demo.h                   # 多线程编程示例
+├── design-patterns/                            # 设计模式
+│   ├── singleton/                              # 单例模式示例
+│   │   └── singleton_pattern.h                 # 单例模式实现和演示
+│   ├── observer/                               # 观察者模式示例
+│   │   └── observer_pattern.h                  # 观察者模式实现和演示
+│   ├── strategy/                               # 策略模式示例
+│   │   └── strategy_pattern.h                  # 策略模式实现和演示
+│   ├── decorator/                              # 装饰器模式示例
+│   │   └── decorator_pattern.h                 # 装饰器模式实现和演示
+│   ├── factory/                                # 工厂模式示例
+│   │   └── factory_pattern.h                   # 工厂模式实现和演示
+│   └── design_patterns_base.h                  # 设计模式基础实现
+├── function-comparison/                        # 函数比较
+│   └── function_comparison_demo.h              # 函数指针、std::function和lambda比较
+├── memory-arena/                               # 内存池
+│   └── improved_memory_arena.h                 # 改进的内存池实现和演示
+└── modern-cpp-features/                        # 现代C++特性
+    └── modern_cpp_features_demo.h              # 现代C++特性示例
 ```
 
 ## C++ 技术主题
@@ -106,6 +143,7 @@ C++错误处理机制：
 - 原子操作
 - 异步操作和future
 - 共享互斥锁
+- 线程安全数据结构
 
 ### 8. 设计模式 (Design Patterns)
 文件目录: `design-patterns/`
@@ -117,7 +155,27 @@ C++错误处理机制：
 - 装饰器模式 (Decorator)
 - 工厂模式 (Factory)
 
-### 9. 现代C++特性 (Modern C++ Features)
+### 9. 函数比较 (Function Comparison)
+文件目录: `function-comparison/`
+
+比较不同类型的可调用对象：
+- 函数指针
+- 函数对象(仿函数)
+- Lambda表达式
+- std::function
+- 性能比较和使用场景
+
+### 10. 内存池 (Memory Arena)
+文件目录: `memory-arena/`
+
+自定义内存管理技术：
+- 内存池实现原理
+- 多块内存管理
+- 大对象独立分配
+- 自定义类型与就地构造
+- 性能优化和内存碎片避免
+
+### 11. 现代C++特性 (Modern C++ Features)
 文件目录: `modern-cpp-features/`
 
 C++11/14/17/20的新特性：
@@ -144,6 +202,16 @@ make
 ./cpp_learning_demo
 ```
 
+## 项目改进
+
+本项目经过重构和改进，具有以下特点：
+
+1. **模块化结构**：每个技术主题都被拆分成多个文件，便于理解和维护
+2. **清晰的组织**：相似功能的代码放在同一目录下，结构更加清晰
+3. **完整的示例**：每个技术都提供了完整的演示代码和实际应用示例
+4. **性能对比**：关键特性提供了性能对比，帮助理解不同方法的优劣
+5. **现代C++实践**：使用现代C++特性和最佳实践
+
 ## 学习建议
 
 1. 从 `main.cpp` 开始，查看每种技术的演示
@@ -151,6 +219,7 @@ make
 3. 修改代码并观察结果，加深理解
 4. 尝试添加自己的示例来练习这些技术
 5. 按照目录顺序学习，从基础到高级逐步深入
+6. 关注性能对比部分，理解不同技术的适用场景
 
 ## 参考资料
 
