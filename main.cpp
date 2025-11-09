@@ -25,6 +25,9 @@
 #include "design-patterns/decorator/decorator_pattern.h"
 #include "design-patterns/factory/factory_pattern.h"
 
+// Function comparison header
+#include "function-comparison/function_comparison_demo.h"
+
 // Other C++ topics headers
 #include "stl-containers/stl_containers_demo.h"
 #include "stl-algorithms/stl_algorithms_demo.h"
@@ -109,7 +112,11 @@ int main() {
     modern_cpp_features_demo::structured_bindings_demo();
     modern_cpp_features_demo::if_constexpr_demo();
     modern_cpp_features_demo::fold_expressions_demo();
-
+    
+    // 10. Function comparison demo
+    std::cout << "\n\n10. 函数比较演示:" << std::endl;
+    function_comparison_demo::function_comparison_demo();
+    
     std::cout << "\n\n=== 所有演示完成 ===" << std::endl;
     
     return 0;

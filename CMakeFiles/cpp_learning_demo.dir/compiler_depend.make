@@ -996,8 +996,18 @@ CMakeFiles/cpp_learning_demo.dir/main.cpp.o: main.cpp \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  design-patterns/design_patterns_demo.h \
+  design-patterns/design_patterns_base.h \
+  design-patterns/decorator/decorator_pattern.h \
+  design-patterns/design_patterns_base.h \
+  design-patterns/factory/factory_pattern.h \
+  design-patterns/design_patterns_base.h \
+  design-patterns/observer/observer_pattern.h \
+  design-patterns/design_patterns_base.h \
+  design-patterns/singleton/singleton_pattern.h \
+  design-patterns/design_patterns_base.h \
+  design-patterns/strategy/strategy_pattern.h \
   exception-handling/exception_handling_demo.h \
+  function-comparison/function_comparison_demo.h \
   meta-programming/constexpr/constexpr_base.h \
   meta-programming/constexpr/constexpr_demo.h \
   meta-programming/crtp/crtp_base.h \
@@ -1058,7 +1068,15 @@ meta-programming/constexpr/constexpr_base.h:
 
 exception-handling/exception_handling_demo.h:
 
-design-patterns/design_patterns_demo.h:
+design-patterns/strategy/strategy_pattern.h:
+
+design-patterns/singleton/singleton_pattern.h:
+
+design-patterns/factory/factory_pattern.h:
+
+design-patterns/decorator/decorator_pattern.h:
+
+design-patterns/design_patterns_base.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h:
 
@@ -1316,6 +1334,8 @@ meta-programming/crtp/crtp_base.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cstdarg:
 
+design-patterns/observer/observer_pattern.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/condition_variable:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__charconv/tables.h:
@@ -1473,6 +1493,8 @@ meta-programming/crtp/crtp_base.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__iterator/incrementable_traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__type_traits/is_convertible.h:
+
+function-comparison/function_comparison_demo.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__type_traits/is_compound.h:
 
