@@ -218,7 +218,9 @@ namespace advanced_design_patterns_demo {
     }
 
     // 4. 状态模式 (State Pattern)
+    // 前向声明
     class Context;
+    class ConcreteStateB;
 
     class State {
     public:
@@ -246,7 +248,7 @@ namespace advanced_design_patterns_demo {
     public:
         void handle(Context& context) override {
             std::cout << "处理状态A" << std::endl;
-            context.set_state(std::make_unique<class ConcreteStateB>());
+            context.set_state(std::make_unique<ConcreteStateB>());
         }
     };
 
