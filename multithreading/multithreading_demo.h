@@ -44,22 +44,23 @@ namespace multithreading_demo {
     void mutex_condition_variable_demo() {
         std::cout << "\n=== 互斥锁和条件变量演示 ===" << std::endl;
         
-        ThreadSafeQueue queue;
+        // 使用继承和std::shared_ptr的方式
+        std::shared_ptr<ThreadSafeQueue> queue = std::make_shared<ThreadSafeQueue>();
         std::vector<std::thread> threads;
 
         threads.reserve(2);
         // 生产者线程
-        threads.emplace_back([&queue]() {
+        threads.emplace_back([queue]() {
             for (int i = 0; i < 5; ++i) {
-                queue.push(i);
+                queue->push(i);
                 std::this_thread::sleep_for(std::chrono::milliseconds(100));
             }
         });
         
         // 消费者线程
-        threads.emplace_back([&queue]() {
+        threads.emplace_back([queue]() {
             for (int i = 0; i < 5; ++i) {
-                int value = queue.pop();
+                int value = queue->pop();
                 std::cout << "消费值: " << value << std::endl;
             }
         });
