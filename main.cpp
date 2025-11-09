@@ -31,6 +31,24 @@
 // Improved memory arena header
 #include "memory-arena/improved_memory_arena.h"
 
+// Performance benchmarking header
+#include "performance-benchmarking/performance_benchmarking_demo.h"
+
+// Filesystem header
+#include "filesystem/filesystem_demo.h"
+
+// Network programming header
+#include "network/network_demo.h"
+
+// C++20/23 features header
+#include "cpp20-23/cpp20_23_features_demo.h"
+
+// Memory leak detection header
+#include "memory-leak-detection/memory_leak_detection_demo.h"
+
+// Interoperability header
+#include "interop/interop_demo.h"
+
 // Other C++ topics headers
 #include "stl-containers/stl_containers_demo.h"
 #include "stl-algorithms/stl_algorithms_demo.h"
@@ -123,6 +141,30 @@ int main() {
     // 11. Improved memory arena demo
     std::cout << "\n\n11. 改进的内存池演示:" << std::endl;
     improved_memory_arena_demo::improved_memory_arena_demo();
+    
+    // 12. Performance benchmarking demo
+    std::cout << "\n\n12. 性能分析和基准测试演示:" << std::endl;
+    performance_benchmarking_demo::run_demo();
+    
+    // 13. Filesystem demo
+    std::cout << "\n\n13. 文件系统操作演示:" << std::endl;
+    filesystem_demo::run_demo();
+    
+    // 14. Network programming demo
+    std::cout << "\n\n14. 网络编程演示:" << std::endl;
+    network_demo::run_demo();
+    
+    // 15. C++20/23 features demo
+    std::cout << "\n\n15. C++20/23新特性演示:" << std::endl;
+    cpp20_23_features_demo::run_demo();
+    
+    // 16. Memory leak detection demo
+    std::cout << "\n\n16. 内存管理和泄漏检测演示:" << std::endl;
+    memory_leak_detection_demo::run_demo();
+    
+    // 17. Interoperability demo
+    std::cout << "\n\n17. C++与其他语言互操作演示:" << std::endl;
+    interop_demo::run_demo();
     
     std::cout << "\n\n=== 所有演示完成 ===" << std::endl;
     

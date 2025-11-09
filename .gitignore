@@ -36,3 +36,7 @@ release/
 
 # Testing
 Testing/
+cpp_learning_demo_tests
+
+# Demo directories
+demo_directory/

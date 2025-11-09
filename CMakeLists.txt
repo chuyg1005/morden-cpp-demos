@@ -50,9 +50,21 @@ set(HEADER_FILES
     function-comparison/function_comparison_demo.h
     memory-arena/improved_memory_arena.h
     memory-arena/memory_arena.h
+    performance-benchmarking/performance_benchmarking_demo.h
+    filesystem/filesystem_demo.h
+    network/network_demo.h
+    cpp20-23/cpp20_23_features_demo.h
+    memory-leak-detection/memory_leak_detection_demo.h
+    interop/interop_demo.h
 )
 
 add_executable(cpp_learning_demo main.cpp ${HEADER_FILES})
 
 # Link required libraries
 target_link_libraries(cpp_learning_demo PRIVATE Threads::Threads)
+
+# 添加测试子目录
+# 注意：只有在系统中安装了Google Test时才会构建测试
+if(GTEST_FOUND)
+    add_subdirectory(tests)
+endif()
