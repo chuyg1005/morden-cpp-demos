@@ -7,6 +7,7 @@ enable_testing()
 find_package(GTest QUIET)
 
 if(GTEST_FOUND)
+    message(STATUS "Found GTest: ${GTEST_INCLUDE_DIRS}")
     # 创建测试可执行文件
     add_executable(cpp_learning_demo_tests
         test_main.cpp
@@ -18,6 +19,7 @@ if(GTEST_FOUND)
         GTest::gtest 
         GTest::gtest_main
     )
+    target_include_directories(cpp_learning_demo_tests PRIVATE ${GTEST_INCLUDE_DIRS})
 
     # 注册测试
     add_test(NAME cpp_learning_demo_tests COMMAND cpp_learning_demo_tests)
@@ -29,6 +31,7 @@ else()
     endif()
     
     if(GTEST_FOUND)
+        message(STATUS "Found GTest via pkg-config: ${GTEST_INCLUDE_DIRS}")
         # 创建测试可执行文件
         add_executable(cpp_learning_demo_tests
             test_main.cpp
