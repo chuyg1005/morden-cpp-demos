@@ -39,40 +39,14 @@ namespace multithreading_demo {
         t2.join();
     }
 
-    // 演示互斥锁和条件变量
-    class ThreadSafeQueue {
-    private:
-        std::queue<int> queue_;
-        mutable std::mutex mutex_;
-        std::condition_variable cond_var_;
-
-    public:
-        void push(int value) {
-            std::lock_guard<std::mutex> lock(mutex_);
-            queue_.push(value);
-            cond_var_.notify_one();
-        }
-
-        int pop() {
-            std::unique_lock<std::mutex> lock(mutex_);
-            cond_var_.wait(lock, [this] { return !queue_.empty(); });
-            int value = queue_.front();
-            queue_.pop();
-            return value;
-        }
-
-        bool empty() const {
-            std::lock_guard<std::mutex> lock(mutex_);
-            return queue_.empty();
-        }
-    };
 
     void mutex_condition_variable_demo() {
         std::cout << "\n=== 互斥锁和条件变量演示 ===" << std::endl;
         
         ThreadSafeQueue queue;
         std::vector<std::thread> threads;
-        
+
+        threads.reserve(2);
         // 生产者线程
         threads.emplace_back([&queue]() {
             for (int i = 0; i < 5; ++i) {
