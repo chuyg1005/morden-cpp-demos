@@ -1008,6 +1008,7 @@ CMakeFiles/cpp_learning_demo.dir/main.cpp.o: main.cpp \
   design-patterns/strategy/strategy_pattern.h \
   exception-handling/exception_handling_demo.h \
   function-comparison/function_comparison_demo.h \
+  memory-arena/memory_arena.h \
   meta-programming/constexpr/constexpr_base.h \
   meta-programming/constexpr/constexpr_demo.h \
   meta-programming/crtp/crtp_base.h \
@@ -1115,6 +1116,8 @@ design-patterns/design_patterns_base.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_u_int16_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_u_char.h:
+
+memory-arena/memory_arena.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_timeval.h:
 

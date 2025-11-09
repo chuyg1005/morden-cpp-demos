@@ -950,6 +950,7 @@ CMakeFiles/cpp_learning_demo.dir/main.cpp.o: \
   /Users/yukang/projects/meta-programming-demo/design-patterns/factory/factory_pattern.h \
   /Users/yukang/projects/meta-programming-demo/design-patterns/factory/../design_patterns_base.h \
   /Users/yukang/projects/meta-programming-demo/function-comparison/function_comparison_demo.h \
+  /Users/yukang/projects/meta-programming-demo/memory-arena/memory_arena.h \
   /Users/yukang/projects/meta-programming-demo/stl-containers/stl_containers_demo.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/deque \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/list \

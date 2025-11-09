@@ -28,6 +28,9 @@
 // Function comparison header
 #include "function-comparison/function_comparison_demo.h"
 
+// Memory arena header
+#include "memory-arena/memory_arena.h"
+
 // Other C++ topics headers
 #include "stl-containers/stl_containers_demo.h"
 #include "stl-algorithms/stl_algorithms_demo.h"
@@ -116,6 +119,10 @@ int main() {
     // 10. Function comparison demo
     std::cout << "\n\n10. 函数比较演示:" << std::endl;
     function_comparison_demo::function_comparison_demo();
+    
+    // 11. Memory arena demo
+    std::cout << "\n\n11. 内存池演示:" << std::endl;
+    memory_arena_demo::memory_arena_demo();
     
     std::cout << "\n\n=== 所有演示完成 ===" << std::endl;
     
