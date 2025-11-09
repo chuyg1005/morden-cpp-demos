@@ -12,6 +12,7 @@
 #include <vector>
 #include <queue>
 #include <random>
+#include "thread_safe_queue.h"
 
 // 演示多线程编程
 namespace multithreading_demo {

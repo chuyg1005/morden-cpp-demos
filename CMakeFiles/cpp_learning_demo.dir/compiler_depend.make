@@ -1015,7 +1015,14 @@ CMakeFiles/cpp_learning_demo.dir/main.cpp.o: main.cpp \
   modern-cpp-features/modern_cpp_features_demo.h \
   move-semantics/move_semantics_demo.h \
   multithreading/multithreading_demo.h \
-  smart-pointers/smart_pointers_demo.h \
+  smart-pointers/smart_pointers_base.h \
+  smart-pointers/circular_reference/circular_reference_demo.h \
+  smart-pointers/smart_pointers_base.h \
+  smart-pointers/shared_ptr/shared_ptr_demo.h \
+  smart-pointers/smart_pointers_base.h \
+  smart-pointers/unique_ptr/unique_ptr_demo.h \
+  smart-pointers/smart_pointers_base.h \
+  smart-pointers/weak_ptr/weak_ptr_demo.h \
   stl-algorithms/stl_algorithms_demo.h \
   stl-containers/stl_containers_demo.h
 
@@ -1023,6 +1030,8 @@ CMakeFiles/cpp_learning_demo.dir/main.cpp.o: main.cpp \
 stl-containers/stl_containers_demo.h:
 
 stl-algorithms/stl_algorithms_demo.h:
+
+smart-pointers/circular_reference/circular_reference_demo.h:
 
 move-semantics/move_semantics_demo.h:
 
@@ -1250,8 +1259,6 @@ meta-programming/crtp/crtp_base.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/ratio:
 
-smart-pointers/smart_pointers_demo.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/random:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_gid_t.h:
@@ -1474,6 +1481,8 @@ smart-pointers/smart_pointers_demo.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__type_traits/is_bounded_array.h:
 
+smart-pointers/unique_ptr/unique_ptr_demo.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__type_traits/is_base_of.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__concepts/class_or_enum.h:
@@ -1649,6 +1658,8 @@ meta-programming/type_traits/type_traits_base.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_types/_uint64_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__type_traits/is_integral.h:
+
+smart-pointers/shared_ptr/shared_ptr_demo.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/transform_inclusive_scan.h:
 
@@ -1977,6 +1988,8 @@ multithreading/multithreading_demo.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/bind_front.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/bitset:
+
+smart-pointers/weak_ptr/weak_ptr_demo.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__format/unicode.h:
 
@@ -2471,6 +2484,8 @@ meta-programming/crtp/crtp_demo.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/binary_function.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__atomic/kill_dependency.h:
+
+smart-pointers/smart_pointers_base.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__type_traits/lazy.h:
 

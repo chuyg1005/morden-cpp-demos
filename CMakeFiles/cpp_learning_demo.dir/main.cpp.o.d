@@ -1002,6 +1002,7 @@ CMakeFiles/cpp_learning_demo.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/condition_variable \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/future \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/queue \
+  /Users/yukang/projects/meta-programming-demo/multithreading/thread_safe_queue.h \
   /Users/yukang/projects/meta-programming-demo/design-patterns/design_patterns_demo.h \
   /Users/yukang/projects/meta-programming-demo/modern-cpp-features/modern_cpp_features_demo.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/any \
