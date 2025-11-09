@@ -60,7 +60,7 @@ namespace exception_handling_demo {
             std::vector<int> temp_data = data_;
             temp_data.push_back(value);
             
-            // 只有在所有操作都成功后才修改对象状态
+            // 只有在所有操作都成功后才修改对象状态，保障事务特性
             data_ = std::move(temp_data);
             std::cout << "强异常安全保证操作完成" << std::endl;
         }
@@ -117,6 +117,20 @@ namespace exception_handling_demo {
         }
     };
 
+    class FunctionNoexceptDemo {
+    private:
+        std::unique_ptr<int> ptr_;
+
+    public:
+        // 构造函数中的函数try块
+        FunctionNoexceptDemo(int value) noexcept : ptr_(std::make_unique<int>(value)) {
+            std::cout << "FunctionNoexceptDemo构造函数" << std::endl;
+            if (value < 0) {
+                throw std::invalid_argument("值不能为负数");
+            }
+        }
+    };
+
     void function_try_block_demo() {
         std::cout << "\n=== 函数try块演示 ===" << std::endl;
         
@@ -137,10 +151,16 @@ namespace exception_handling_demo {
     void noexcept_demo() {
         std::cout << "\n=== noexcept演示 ===" << std::endl;
         
-        // 检查函数是否声明为noexcept
+        // 检查函数是否声明为noexcept，如果函数构造函数定义为noexcept，则各种操作效率会高不少
         std::cout << "std::is_nothrow_move_constructible<int>::value: " 
                   << std::is_nothrow_move_constructible<int>::value << std::endl;
-        
+
+        std::cout << "std::is_nothrow_move_assignable<FunctionTryBlockDemo>::value: "
+                  << std::is_nothrow_move_assignable<FunctionTryBlockDemo>::value << std::endl;
+
+        std::cout << "std::is_nothrow_move_assignable<FunctionNoexcpetDemo>::value: "
+                  << std::is_nothrow_move_assignable<FunctionNoexceptDemo>::value << std::endl;
+
         // 自定义noexcept函数
         auto noexcept_func = []() noexcept {
             std::cout << "noexcept函数" << std::endl;
