@@ -863,7 +863,14 @@ CMakeFiles/cpp_learning_demo.dir/main.cpp.o: \
   /Users/yukang/projects/meta-programming-demo/meta-programming/type_introspection/type_introspection_base.h \
   /Users/yukang/projects/meta-programming-demo/meta-programming/crtp/crtp_demo.h \
   /Users/yukang/projects/meta-programming-demo/meta-programming/crtp/crtp_base.h \
-  /Users/yukang/projects/meta-programming-demo/smart-pointers/smart_pointers_demo.h \
+  /Users/yukang/projects/meta-programming-demo/smart-pointers/unique_ptr/unique_ptr_demo.h \
+  /Users/yukang/projects/meta-programming-demo/smart-pointers/unique_ptr/../smart_pointers_base.h \
+  /Users/yukang/projects/meta-programming-demo/smart-pointers/shared_ptr/shared_ptr_demo.h \
+  /Users/yukang/projects/meta-programming-demo/smart-pointers/shared_ptr/../smart_pointers_base.h \
+  /Users/yukang/projects/meta-programming-demo/smart-pointers/weak_ptr/weak_ptr_demo.h \
+  /Users/yukang/projects/meta-programming-demo/smart-pointers/weak_ptr/../smart_pointers_base.h \
+  /Users/yukang/projects/meta-programming-demo/smart-pointers/circular_reference/circular_reference_demo.h \
+  /Users/yukang/projects/meta-programming-demo/smart-pointers/circular_reference/../smart_pointers_base.h \
   /Users/yukang/projects/meta-programming-demo/stl-containers/stl_containers_demo.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/deque \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/functional \

@@ -998,13 +998,20 @@ CMakeFiles/cpp_learning_demo.dir/main.cpp.o: main.cpp \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
   design-patterns/design_patterns_demo.h \
   exception-handling/exception_handling_demo.h \
-  meta-programming/constexpr_demo.h \
-  meta-programming/crtp_demo.h \
-  meta-programming/sfinae_demo.h \
-  meta-programming/template_specialization_demo.h \
-  meta-programming/type_introspection_demo.h \
-  meta-programming/type_traits_demo.h \
-  meta-programming/variadic_templates_demo.h \
+  meta-programming/constexpr/constexpr_base.h \
+  meta-programming/constexpr/constexpr_demo.h \
+  meta-programming/crtp/crtp_base.h \
+  meta-programming/crtp/crtp_demo.h \
+  meta-programming/sfinae/sfinae_base.h \
+  meta-programming/sfinae/sfinae_demo.h \
+  meta-programming/template_specialization/template_specialization_base.h \
+  meta-programming/template_specialization/template_specialization_demo.h \
+  meta-programming/type_introspection/type_introspection_base.h \
+  meta-programming/type_introspection/type_introspection_demo.h \
+  meta-programming/type_traits/type_traits_base.h \
+  meta-programming/type_traits/type_traits_demo.h \
+  meta-programming/variadic_templates/variadic_templates_base.h \
+  meta-programming/variadic_templates/variadic_templates_demo.h \
   modern-cpp-features/modern_cpp_features_demo.h \
   move-semantics/move_semantics_demo.h \
   multithreading/multithreading_demo.h \
@@ -1021,15 +1028,23 @@ move-semantics/move_semantics_demo.h:
 
 modern-cpp-features/modern_cpp_features_demo.h:
 
-meta-programming/variadic_templates_demo.h:
+meta-programming/variadic_templates/variadic_templates_demo.h:
 
-meta-programming/type_traits_demo.h:
+meta-programming/variadic_templates/variadic_templates_base.h:
 
-meta-programming/type_introspection_demo.h:
+meta-programming/type_introspection/type_introspection_base.h:
 
-meta-programming/template_specialization_demo.h:
+meta-programming/template_specialization/template_specialization_demo.h:
 
-meta-programming/crtp_demo.h:
+meta-programming/template_specialization/template_specialization_base.h:
+
+meta-programming/sfinae/sfinae_demo.h:
+
+meta-programming/sfinae/sfinae_base.h:
+
+meta-programming/constexpr/constexpr_demo.h:
+
+meta-programming/constexpr/constexpr_base.h:
 
 exception-handling/exception_handling_demo.h:
 
@@ -1153,8 +1168,6 @@ design-patterns/design_patterns_demo.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h:
 
-meta-programming/constexpr_demo.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_pthread/_pthread_attr_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_ct_rune_t.h:
@@ -1214,6 +1227,8 @@ meta-programming/constexpr_demo.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/typeinfo:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/type_traits:
+
+meta-programming/crtp/crtp_base.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/tuple:
 
@@ -1522,6 +1537,8 @@ smart-pointers/smart_pointers_demo.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/unique_copy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__tuple/tuple_element.h:
+
+meta-programming/type_traits/type_traits_base.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__tuple/pair_like.h:
 
@@ -1879,8 +1896,6 @@ smart-pointers/smart_pointers_demo.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__iterator/access.h:
 
-meta-programming/sfinae_demo.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ios/fpos.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__fwd/tuple.h:
@@ -1970,6 +1985,8 @@ multithreading/multithreading_demo.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__type_traits/add_const.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/temp_value.h:
+
+meta-programming/crtp/crtp_demo.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__format/parser_std_format_spec.h:
 
@@ -2495,6 +2512,8 @@ multithreading/multithreading_demo.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__iterator/reverse_access.h:
 
+meta-programming/type_introspection/type_introspection_demo.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/ranges_stable_partition.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/pstl_merge.h:
@@ -2638,6 +2657,8 @@ multithreading/multithreading_demo.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/pthread.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/comp_ref_type.h:
+
+meta-programming/type_traits/type_traits_demo.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/stdlib.h:
 

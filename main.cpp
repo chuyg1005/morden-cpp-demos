@@ -12,8 +12,13 @@
 #include "meta-programming/type_introspection/type_introspection_demo.h"
 #include "meta-programming/crtp/crtp_demo.h"
 
+// Smart pointers headers
+#include "smart-pointers/unique_ptr/unique_ptr_demo.h"
+#include "smart-pointers/shared_ptr/shared_ptr_demo.h"
+#include "smart-pointers/weak_ptr/weak_ptr_demo.h"
+#include "smart-pointers/circular_reference/circular_reference_demo.h"
+
 // Other C++ topics headers
-#include "smart-pointers/smart_pointers_demo.h"
 #include "stl-containers/stl_containers_demo.h"
 #include "stl-algorithms/stl_algorithms_demo.h"
 #include "move-semantics/move_semantics_demo.h"
