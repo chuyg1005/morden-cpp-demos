@@ -95,6 +95,15 @@ namespace exception_handling_demo {
         }
     }
 
+    class FunctionNormalDemo {
+    private:
+        std::unique_ptr<int> ptr_;
+    public:
+        FunctionNormalDemo(int value) : ptr_(std::make_unique<int>(value)) {
+            std::cout << "FunctionNormalDemo构造函数" << std::endl;
+        }
+    };
+
     // 演示函数try块
     class FunctionTryBlockDemo {
     private:
@@ -123,7 +132,7 @@ namespace exception_handling_demo {
 
     public:
         // 构造函数中的函数try块
-        FunctionNoexceptDemo(int value) noexcept : ptr_(std::make_unique<int>(value)) {
+        FunctionNoexceptDemo(int value) : ptr_(std::make_unique<int>(value)) {
             std::cout << "FunctionNoexceptDemo构造函数" << std::endl;
             if (value < 0) {
                 throw std::invalid_argument("值不能为负数");
@@ -153,13 +162,16 @@ namespace exception_handling_demo {
         
         // 检查函数是否声明为noexcept，如果函数构造函数定义为noexcept，则各种操作效率会高不少
         std::cout << "std::is_nothrow_move_constructible<int>::value: " 
-                  << std::is_nothrow_move_constructible<int>::value << std::endl;
+                  << std::is_nothrow_move_constructible<int>::value << std::endl; // true
+
+        std::cout << "std::is_nothrow_move_constructible<FunctionNormalDemo>::value: " // true
+                  << std::is_nothrow_move_constructible<FunctionNormalDemo>::value << std::endl; // true
 
         std::cout << "std::is_nothrow_move_assignable<FunctionTryBlockDemo>::value: "
-                  << std::is_nothrow_move_assignable<FunctionTryBlockDemo>::value << std::endl;
+                  << std::is_nothrow_move_assignable<FunctionTryBlockDemo>::value << std::endl; // false
 
-        std::cout << "std::is_nothrow_move_assignable<FunctionNoexcpetDemo>::value: "
-                  << std::is_nothrow_move_assignable<FunctionNoexceptDemo>::value << std::endl;
+        std::cout << "std::is_nothrow_move_assignable<FunctionNoexceptDemo>::value: "
+                  << std::is_nothrow_move_assignable<FunctionNoexceptDemo>::value << std::endl; // true
 
         // 自定义noexcept函数
         auto noexcept_func = []() noexcept {
