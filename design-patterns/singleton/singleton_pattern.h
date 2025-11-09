@@ -17,11 +17,12 @@ namespace design_patterns_demo {
 
     public:
         // 禁止拷贝
-        Singleton(const Singleton&) = delete;
-        Singleton& operator=(const Singleton&) = delete;
+        Singleton(const Singleton &) = delete;
+
+        Singleton &operator=(const Singleton &) = delete;
 
         // 获取实例
-        static Singleton* getInstance() {
+        static Singleton *getInstance() {
             std::lock_guard<std::mutex> lock(mutex_);
             if (!instance_) {
                 instance_ = std::unique_ptr<Singleton>(new Singleton());
@@ -40,16 +41,16 @@ namespace design_patterns_demo {
 
     void singleton_demo() {
         std::cout << "\n=== 单例模式演示 ===" << std::endl;
-        
+
         // 获取单例实例
-        Singleton* s1 = Singleton::getInstance();
-        Singleton* s2 = Singleton::getInstance();
-        
+        Singleton *s1 = Singleton::getInstance();
+        Singleton *s2 = Singleton::getInstance();
+
         // 验证是否为同一实例
         std::cout << "s1地址: " << s1 << std::endl;
         std::cout << "s2地址: " << s2 << std::endl;
         std::cout << "是否为同一实例: " << std::boolalpha << (s1 == s2) << std::endl;
-        
+
         s1->doSomething();
     }
 }

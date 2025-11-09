@@ -66,6 +66,7 @@ int main() {
     stl_algorithms_demo::sorting_algorithms_demo();
     stl_algorithms_demo::numeric_algorithms_demo();
     stl_algorithms_demo::set_algorithms_demo();
+    stl_algorithms_demo::algorithm_performance_demo();
     
     // 5. Move semantics demo
     std::cout << "\n\n5. 移动语义演示:" << std::endl;
@@ -80,7 +81,7 @@ int main() {
     exception_handling_demo::exception_safety_demo();
     exception_handling_demo::function_try_block_demo();
     exception_handling_demo::noexcept_demo();
-    
+
     // 7. Multithreading demo
     std::cout << "\n\n7. 多线程演示:" << std::endl;
     multithreading_demo::basic_threading_demo();
@@ -108,7 +109,7 @@ int main() {
     modern_cpp_features_demo::structured_bindings_demo();
     modern_cpp_features_demo::if_constexpr_demo();
     modern_cpp_features_demo::fold_expressions_demo();
-    
+
     std::cout << "\n\n=== 所有演示完成 ===" << std::endl;
     
     return 0;
