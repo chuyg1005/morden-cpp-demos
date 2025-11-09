@@ -211,12 +211,16 @@ make
 当有新的推送到达main分支时，系统会自动发送邮件通知。
 
 要启用邮件通知功能，需要在GitHub仓库的Secrets中添加以下配置：
-- `EMAIL_USERNAME` - 发送邮件的邮箱账号
-- `EMAIL_PASSWORD` - 发送邮件的邮箱密码或应用专用密码
+- `EMAIL_USERNAME` - 发送邮件的QQ邮箱账号
+- `EMAIL_PASSWORD` - QQ邮箱的授权码（不是登录密码）
 - `EMAIL_RECIPIENT` - 接收通知的邮箱地址
 
-工作流使用了 `dawidd6/action-send-mail@v3` 动作，支持大多数SMTP邮件服务。
-默认配置使用Gmail SMTP，如需使用其他邮件服务，请相应修改 `server_address` 和 `server_port`。
+工作流使用了 `dawidd6/action-send-mail@v3` 动作，配置为使用QQ邮箱的SMTP服务：
+- SMTP服务器: smtp.qq.com
+- 端口: 587
+- 加密方式: STARTTLS
+
+注意：对于QQ邮箱，需要使用授权码而不是登录密码。请在QQ邮箱设置中生成授权码。
 
 工作流文件位于 `.github/workflows/email-notification.yml`。
 
