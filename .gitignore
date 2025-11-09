@@ -21,6 +21,10 @@ cmake_install.cmake
 *.lib
 *.out
 
+# Executable files (common names)
+cpp_learning_demo
+main
+
 # Debug and release directories
 Debug/
 Release/
