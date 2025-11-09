@@ -22,6 +22,7 @@ jobs:
             
             There has been a new push to the main branch of the C++ Learning Demo repository.
             
+            
             Repository: ${{ github.repository }}
             Commit Author: ${{ github.actor }}
             Commit Message: ${{ github.event.head_commit.message }}
