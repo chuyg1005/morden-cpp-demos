@@ -849,13 +849,20 @@ CMakeFiles/cpp_learning_demo.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/array \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/temp_value.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__split_buffer \
-  /Users/yukang/projects/meta-programming-demo/meta-programming/type_traits_demo.h \
-  /Users/yukang/projects/meta-programming-demo/meta-programming/template_specialization_demo.h \
-  /Users/yukang/projects/meta-programming-demo/meta-programming/sfinae_demo.h \
-  /Users/yukang/projects/meta-programming-demo/meta-programming/constexpr_demo.h \
-  /Users/yukang/projects/meta-programming-demo/meta-programming/variadic_templates_demo.h \
-  /Users/yukang/projects/meta-programming-demo/meta-programming/type_introspection_demo.h \
-  /Users/yukang/projects/meta-programming-demo/meta-programming/crtp_demo.h \
+  /Users/yukang/projects/meta-programming-demo/meta-programming/type_traits/type_traits_demo.h \
+  /Users/yukang/projects/meta-programming-demo/meta-programming/type_traits/type_traits_base.h \
+  /Users/yukang/projects/meta-programming-demo/meta-programming/template_specialization/template_specialization_demo.h \
+  /Users/yukang/projects/meta-programming-demo/meta-programming/template_specialization/template_specialization_base.h \
+  /Users/yukang/projects/meta-programming-demo/meta-programming/sfinae/sfinae_demo.h \
+  /Users/yukang/projects/meta-programming-demo/meta-programming/sfinae/sfinae_base.h \
+  /Users/yukang/projects/meta-programming-demo/meta-programming/constexpr/constexpr_demo.h \
+  /Users/yukang/projects/meta-programming-demo/meta-programming/constexpr/constexpr_base.h \
+  /Users/yukang/projects/meta-programming-demo/meta-programming/variadic_templates/variadic_templates_demo.h \
+  /Users/yukang/projects/meta-programming-demo/meta-programming/variadic_templates/variadic_templates_base.h \
+  /Users/yukang/projects/meta-programming-demo/meta-programming/type_introspection/type_introspection_demo.h \
+  /Users/yukang/projects/meta-programming-demo/meta-programming/type_introspection/type_introspection_base.h \
+  /Users/yukang/projects/meta-programming-demo/meta-programming/crtp/crtp_demo.h \
+  /Users/yukang/projects/meta-programming-demo/meta-programming/crtp/crtp_base.h \
   /Users/yukang/projects/meta-programming-demo/smart-pointers/smart_pointers_demo.h \
   /Users/yukang/projects/meta-programming-demo/stl-containers/stl_containers_demo.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/deque \

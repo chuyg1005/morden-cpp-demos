@@ -4,13 +4,13 @@
 #include <array>
 
 // Meta-programming headers
-#include "meta-programming/type_traits_demo.h"
-#include "meta-programming/template_specialization_demo.h"
-#include "meta-programming/sfinae_demo.h"
-#include "meta-programming/constexpr_demo.h"
-#include "meta-programming/variadic_templates_demo.h"
-#include "meta-programming/type_introspection_demo.h"
-#include "meta-programming/crtp_demo.h"
+#include "meta-programming/type_traits/type_traits_demo.h"
+#include "meta-programming/template_specialization/template_specialization_demo.h"
+#include "meta-programming/sfinae/sfinae_demo.h"
+#include "meta-programming/constexpr/constexpr_demo.h"
+#include "meta-programming/variadic_templates/variadic_templates_demo.h"
+#include "meta-programming/type_introspection/type_introspection_demo.h"
+#include "meta-programming/crtp/crtp_demo.h"
 
 // Other C++ topics headers
 #include "smart-pointers/smart_pointers_demo.h"
@@ -27,13 +27,13 @@ int main() {
     
     // 1. Meta-programming demo
     std::cout << "\n1. 元编程演示:" << std::endl;
-    type_traits_demo::run_meta_programming_demo();
-    template_specialization_demo::run_meta_programming_demo();
-    sfinae_demo::run_meta_programming_demo();
-    constexpr_demo::run_meta_programming_demo();
-    variadic_templates_demo::run_meta_programming_demo();
-    type_introspection_demo::run_meta_programming_demo();
-    crtp_demo::run_meta_programming_demo();
+    type_traits_demo::run_demo();
+    template_specialization_demo::run_demo();
+    sfinae_demo::run_demo();
+    constexpr_demo::run_demo();
+    variadic_templates_demo::run_demo();
+    type_introspection_demo::run_demo();
+    crtp_demo::run_demo();
     
     // 2. Smart pointers demo
     std::cout << "\n\n2. 智能指针演示:" << std::endl;
