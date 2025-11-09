@@ -9,8 +9,16 @@
 
 
 namespace multithreading_demo {
+    class Queue {
+    public:
+        virtual ~Queue() = default;
+        virtual int pop() = 0;
+        virtual bool empty() const = 0;
+        virtual void push(int value) = 0;
+    };
+
     // 演示互斥锁和条件变量
-    class ThreadSafeQueue {
+    class ThreadSafeQueue: public Queue {
     private:
         std::queue<int> queue_;
         mutable std::mutex mutex_;
@@ -36,9 +44,7 @@ namespace multithreading_demo {
             return queue_.empty();
         }
     };
-
 }
-
 
 
 #endif //THREAD_SAFE_QUEUE_H
