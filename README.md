@@ -204,13 +204,13 @@ make
 
 ## 自动化通知
 
-本项目包含GitHub Actions工作流，可以在推送到main分支时发送邮件通知。
+本项目包含GitHub Actions工作流，可以实现以下自动化通知：
 
-### 邮件通知
+### 推送通知
 
 当有新的推送到达main分支时，系统会自动发送邮件通知。
 
-要启用邮件通知功能，需要在GitHub仓库的Secrets中添加以下配置：
+要启用推送通知功能，需要在GitHub仓库的Secrets中添加以下配置：
 - `EMAIL_USERNAME` - 发送邮件的QQ邮箱账号
 - `EMAIL_PASSWORD` - QQ邮箱的授权码（不是登录密码）
 - `EMAIL_RECIPIENT` - 接收通知的邮箱地址
@@ -222,7 +222,17 @@ make
 
 注意：对于QQ邮箱，需要使用授权码而不是登录密码。请在QQ邮箱设置中生成授权码。
 
-工作流文件位于 `.github/workflows/email-notification.yml`。
+推送通知工作流文件位于 `.github/workflows/email-notification.yml`。
+
+### 天气信息定时通知
+
+系统每分钟自动获取上海和杭州的天气信息并发送邮件通知。
+
+天气信息通过 [wttr.in](https://wttr.in/) API 获取，该服务提供简洁的天气信息。
+
+定时通知使用相同的邮箱配置信息。
+
+定时通知工作流文件位于 `.github/workflows/weather-notification.yml`。
 
 ## 项目改进
 
