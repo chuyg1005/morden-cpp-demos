@@ -1,9 +1,9 @@
 name: Weather Notification for Shanghai and Hangzhou
 
 on:
-  schedule:
-    # Run every minute
-    - cron: '* * * * *'
+  # schedule:
+    # Run every minute - DISABLED
+    # - cron: '* * * * *'
   workflow_dispatch: # Allows manual triggering
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
         run: |
           # Using wttr.in API to get weather information
           # Note: wttr.in has rate limits, so this might not work for every minute in practice
-          shanghai_weather=$(curl -s "https://wttr.in/Shanghai?format=3" 2>/dev/null || echo "无法获取上海天气信息")
+          shanghai_weather=$(" 2>/dev/null || echo "无法获取上海天气信息")
           hangzhou_weather=$(curl -s "https://wttr.in/Hangzhou?format=3" 2>/dev/null || echo "无法获取杭州天气信息")
           
           # Format the message

@@ -224,15 +224,16 @@ make
 
 推送通知工作流文件位于 `.github/workflows/email-notification.yml`。
 
-### 天气信息定时通知
+### 天气信息定时通知 (已禁用)
 
-系统每分钟自动获取上海和杭州的天气信息并发送邮件通知。
+~~系统每分钟自动获取上海和杭州的天气信息并发送邮件通知。~~
 
-天气信息通过 [wttr.in](https://wttr.in/) API 获取，该服务提供简洁的天气信息。
+~~天气信息通过 [wttr.in](https://wttr.in/) API 获取，该服务提供简洁的天气信息。~~
 
-定时通知使用相同的邮箱配置信息。
+~~定时通知使用相同的邮箱配置信息。~~
 
-定时通知工作流文件位于 `.github/workflows/weather-notification.yml`。
+定时通知工作流文件位于 `.github/workflows/weather-notification.yml`，但当前已禁用。
+要重新启用，请取消注释工作流文件中的cron调度部分。
 
 ## 项目改进
 
