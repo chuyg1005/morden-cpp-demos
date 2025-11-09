@@ -45,11 +45,12 @@ namespace multithreading_demo {
         std::cout << "\n=== 互斥锁和条件变量演示 ===" << std::endl;
         
         // 使用继承和std::shared_ptr的方式
-        std::shared_ptr<ThreadSafeQueue> queue = std::make_shared<ThreadSafeQueue>();
+        std::shared_ptr<Queue> queue = std::make_shared<ThreadSafeQueue>();
         std::vector<std::thread> threads;
 
         threads.reserve(2);
         // 生产者线程
+        // 必须要使用值传递，如果使用引用传递智能指针则不会增加引用计数
         threads.emplace_back([queue]() {
             for (int i = 0; i < 5; ++i) {
                 queue->push(i);
