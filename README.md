@@ -202,6 +202,26 @@ make
 ./cpp_learning_demo
 ```
 
+## 自动化通知
+
+本项目包含GitHub Actions工作流，可以在推送到main分支时发送通知。
+
+### QQ群通知选项
+
+由于GitHub Actions没有直接发送QQ消息的内置功能，提供了以下几种方案：
+
+1. **使用第三方通知服务** (如Server酱) - 需要配置相应的webhook URL
+2. **自定义服务** - 需要自己搭建接收通知并转发到QQ的服务
+3. **使用Discord作为中介** - 通过Discord机器人转发到QQ
+
+要启用通知功能，需要在GitHub仓库的Secrets中添加相应的配置：
+- `QQ_WEBHOOK_URL` - 自定义QQ通知服务的URL
+- `SERVERCHAN_KEY` - Server酱的API密钥
+- `CUSTOM_SERVICE_TOKEN` - 自定义服务的认证令牌
+- `DISCORD_WEBHOOK_URL` - Discord webhook URL
+
+工作流文件位于 `.github/workflows/` 目录下。
+
 ## 项目改进
 
 本项目经过重构和改进，具有以下特点：
