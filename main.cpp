@@ -49,6 +49,12 @@
 // Interoperability header
 #include "interop/interop_demo.h"
 
+// Advanced concurrency header
+#include "advanced-concurrency/advanced_concurrency_demo.h"
+
+// Advanced design patterns header
+#include "advanced-design-patterns/advanced_design_patterns_demo.h"
+
 // Other C++ topics headers
 #include "stl-containers/stl_containers_demo.h"
 #include "stl-algorithms/stl_algorithms_demo.h"
@@ -165,6 +171,14 @@ int main() {
     // 17. Interoperability demo
     std::cout << "\n\n17. C++与其他语言互操作演示:" << std::endl;
     interop_demo::run_demo();
+    
+    // 18. Advanced concurrency demo
+    std::cout << "\n\n18. 高级并发编程演示:" << std::endl;
+    advanced_concurrency_demo::run_demo();
+    
+    // 19. Advanced design patterns demo
+    std::cout << "\n\n19. 高级设计模式演示:" << std::endl;
+    advanced_design_patterns_demo::run_demo();
     
     std::cout << "\n\n=== 所有演示完成 ===" << std::endl;
     

@@ -56,6 +56,8 @@ set(HEADER_FILES
     cpp20-23/cpp20_23_features_demo.h
     memory-leak-detection/memory_leak_detection_demo.h
     interop/interop_demo.h
+    advanced-concurrency/advanced_concurrency_demo.h
+    advanced-design-patterns/advanced_design_patterns_demo.h
 )
 
 add_executable(cpp_learning_demo main.cpp ${HEADER_FILES})
