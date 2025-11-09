@@ -67,6 +67,4 @@ target_link_libraries(cpp_learning_demo PRIVATE Threads::Threads)
 
 # 添加测试子目录
 # 注意：只有在系统中安装了Google Test时才会构建测试
-if(GTEST_FOUND)
-    add_subdirectory(tests)
-endif()
+add_subdirectory(tests)
