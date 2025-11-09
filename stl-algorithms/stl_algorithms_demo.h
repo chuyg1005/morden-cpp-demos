@@ -30,6 +30,7 @@ namespace stl_algorithms_demo {
         std::cout << "元素 3 出现次数: " << count << std::endl;
         
         // std::all_of, std::any_of, std::none_of - 条件检查
+        // std::ranges::all_of：是c++20引入的针对ranges类型的算法，原本的stl的算法主要针对迭代器
         bool all_positive = std::all_of(vec.begin(), vec.end(), [](int i) { return i > 0; });
         bool any_negative = std::any_of(vec.begin(), vec.end(), [](int i) { return i < 0; });
         bool none_zero = std::none_of(vec.begin(), vec.end(), [](int i) { return i == 0; });
@@ -139,7 +140,7 @@ namespace stl_algorithms_demo {
         
         // std::set_union - 并集
         std::vector<int> union_result;
-        std::set_union(set1.begin(), set1.end(), set2.begin(), set2.end(), 
+        std::set_union(set1.begin(), set1.end(), set2.begin(), set2.end(),
                        std::back_inserter(union_result));
         std::cout << "并集: ";
         for (const auto& item : union_result) {
