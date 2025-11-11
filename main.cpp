@@ -55,6 +55,9 @@
 // Advanced design patterns header
 #include "advanced-design-patterns/advanced_design_patterns_demo.h"
 
+// Memory order header
+#include "memory-order/memory_order_demo.h"
+
 // Other C++ topics headers
 #include "stl-containers/stl_containers_demo.h"
 #include "stl-algorithms/stl_algorithms_demo.h"
@@ -179,6 +182,10 @@ int main() {
     // 19. Advanced design patterns demo
     std::cout << "\n\n19. 高级设计模式演示:" << std::endl;
     advanced_design_patterns_demo::run_demo();
+    
+    // 20. Memory order demo
+    std::cout << "\n\n20. 内存顺序模型演示:" << std::endl;
+    memory_order_demo::run_demo();
     
     std::cout << "\n\n=== 所有演示完成 ===" << std::endl;
     

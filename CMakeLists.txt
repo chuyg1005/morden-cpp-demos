@@ -58,6 +58,7 @@ set(HEADER_FILES
     interop/interop_demo.h
     advanced-concurrency/advanced_concurrency_demo.h
     advanced-design-patterns/advanced_design_patterns_demo.h
+    memory-order/memory_order_demo.h
 )
 
 add_executable(cpp_learning_demo main.cpp ${HEADER_FILES})
