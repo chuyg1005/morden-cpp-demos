@@ -11,6 +11,7 @@
 #include "meta-programming/variadic_templates/variadic_templates_demo.h"
 #include "meta-programming/type_introspection/type_introspection_demo.h"
 #include "meta-programming/crtp/crtp_demo.h"
+#include "meta-programming/coroutines/coroutines_demo.h"
 
 // Smart pointers headers
 #include "smart-pointers/unique_ptr/unique_ptr_demo.h"
@@ -186,6 +187,10 @@ int main() {
     // 20. Memory order demo
     std::cout << "\n\n20. 内存顺序模型演示:" << std::endl;
     memory_order_demo::run_demo();
+    
+    // 21. Coroutines demo
+    std::cout << "\n\n21. C++协程演示:" << std::endl;
+    coroutines_demo::run_demo();
     
     std::cout << "\n\n=== 所有演示完成 ===" << std::endl;
     

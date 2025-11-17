@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yukang/projects/meta-programming-demo/CMakeFiles /Users/yukang/projects/meta-programming-demo//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /Users/yukang/projects/meta-programming-demo && $(CMAKE_COMMAND) -E cmake_progress_start /Users/yukang/projects/meta-programming-demo/CMakeFiles /Users/yukang/projects/meta-programming-demo/tests//CMakeFiles/progress.marks
+	cd /Users/yukang/projects/meta-programming-demo && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yukang/projects/meta-programming-demo/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /Users/yukang/projects/meta-programming-demo && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,68 +103,80 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/yukang/projects/meta-programming-demo && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/yukang/projects/meta-programming-demo && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/yukang/projects/meta-programming-demo && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named cpp_learning_demo
+# Convenience name for target.
+tests/CMakeFiles/cpp_learning_demo_tests.dir/rule:
+	cd /Users/yukang/projects/meta-programming-demo && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/cpp_learning_demo_tests.dir/rule
+.PHONY : tests/CMakeFiles/cpp_learning_demo_tests.dir/rule
 
-# Build rule for target.
-cpp_learning_demo: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpp_learning_demo
-.PHONY : cpp_learning_demo
-
-# fast build rule for target.
-cpp_learning_demo/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_learning_demo.dir/build.make CMakeFiles/cpp_learning_demo.dir/build
-.PHONY : cpp_learning_demo/fast
-
-#=============================================================================
-# Target rules for targets named cpp_learning_demo_tests
-
-# Build rule for target.
-cpp_learning_demo_tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpp_learning_demo_tests
+# Convenience name for target.
+cpp_learning_demo_tests: tests/CMakeFiles/cpp_learning_demo_tests.dir/rule
 .PHONY : cpp_learning_demo_tests
 
 # fast build rule for target.
 cpp_learning_demo_tests/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/cpp_learning_demo_tests.dir/build.make tests/CMakeFiles/cpp_learning_demo_tests.dir/build
+	cd /Users/yukang/projects/meta-programming-demo && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/cpp_learning_demo_tests.dir/build.make tests/CMakeFiles/cpp_learning_demo_tests.dir/build
 .PHONY : cpp_learning_demo_tests/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+test_main.o: test_main.cpp.o
+.PHONY : test_main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_learning_demo.dir/build.make CMakeFiles/cpp_learning_demo.dir/main.cpp.o
-.PHONY : main.cpp.o
+test_main.cpp.o:
+	cd /Users/yukang/projects/meta-programming-demo && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/cpp_learning_demo_tests.dir/build.make tests/CMakeFiles/cpp_learning_demo_tests.dir/test_main.cpp.o
+.PHONY : test_main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+test_main.i: test_main.cpp.i
+.PHONY : test_main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_learning_demo.dir/build.make CMakeFiles/cpp_learning_demo.dir/main.cpp.i
-.PHONY : main.cpp.i
+test_main.cpp.i:
+	cd /Users/yukang/projects/meta-programming-demo && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/cpp_learning_demo_tests.dir/build.make tests/CMakeFiles/cpp_learning_demo_tests.dir/test_main.cpp.i
+.PHONY : test_main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+test_main.s: test_main.cpp.s
+.PHONY : test_main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_learning_demo.dir/build.make CMakeFiles/cpp_learning_demo.dir/main.cpp.s
-.PHONY : main.cpp.s
+test_main.cpp.s:
+	cd /Users/yukang/projects/meta-programming-demo && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/cpp_learning_demo_tests.dir/build.make tests/CMakeFiles/cpp_learning_demo_tests.dir/test_main.cpp.s
+.PHONY : test_main.cpp.s
+
+test_vector_utils.o: test_vector_utils.cpp.o
+.PHONY : test_vector_utils.o
+
+# target to build an object file
+test_vector_utils.cpp.o:
+	cd /Users/yukang/projects/meta-programming-demo && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/cpp_learning_demo_tests.dir/build.make tests/CMakeFiles/cpp_learning_demo_tests.dir/test_vector_utils.cpp.o
+.PHONY : test_vector_utils.cpp.o
+
+test_vector_utils.i: test_vector_utils.cpp.i
+.PHONY : test_vector_utils.i
+
+# target to preprocess a source file
+test_vector_utils.cpp.i:
+	cd /Users/yukang/projects/meta-programming-demo && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/cpp_learning_demo_tests.dir/build.make tests/CMakeFiles/cpp_learning_demo_tests.dir/test_vector_utils.cpp.i
+.PHONY : test_vector_utils.cpp.i
+
+test_vector_utils.s: test_vector_utils.cpp.s
+.PHONY : test_vector_utils.s
+
+# target to generate assembly for a file
+test_vector_utils.cpp.s:
+	cd /Users/yukang/projects/meta-programming-demo && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/cpp_learning_demo_tests.dir/build.make tests/CMakeFiles/cpp_learning_demo_tests.dir/test_vector_utils.cpp.s
+.PHONY : test_vector_utils.cpp.s
 
 # Help Target
 help:
@@ -174,11 +186,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... cpp_learning_demo"
 	@echo "... cpp_learning_demo_tests"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... test_main.o"
+	@echo "... test_main.i"
+	@echo "... test_main.s"
+	@echo "... test_vector_utils.o"
+	@echo "... test_vector_utils.i"
+	@echo "... test_vector_utils.s"
 .PHONY : help
 
 
@@ -190,6 +204,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/yukang/projects/meta-programming-demo && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

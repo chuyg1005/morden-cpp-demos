@@ -23,6 +23,8 @@ set(HEADER_FILES
     meta-programming/type_introspection/type_introspection_base.h
     meta-programming/crtp/crtp_demo.h
     meta-programming/crtp/crtp_base.h
+    meta-programming/coroutines/coroutines_demo.h
+    meta-programming/coroutines/coroutines_base.h
 
     # Smart pointers headers
     smart-pointers/unique_ptr/unique_ptr_demo.h
